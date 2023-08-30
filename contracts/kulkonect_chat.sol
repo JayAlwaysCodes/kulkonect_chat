@@ -26,6 +26,8 @@ contract kulkonect_chat{
         address accountAddress;
     }
 
+    AllUserStruck[] getAllUsers;
+
     mapping(address => user) userList;
     mapping(bytes32 => message[]) allMessages;
 
@@ -40,6 +42,8 @@ contract kulkonect_chat{
         require(bytes(name).length>0, "Username can not be empty");
 
         userList[msg.sender].name = name;
+
+        getAllUsers.push(AllUserStruck(name, msg.sender));
     }
 
     //get username
@@ -108,6 +112,11 @@ contract kulkonect_chat{
     function readMessage(address friend_key) external view returns (message[] memory){
         bytes32 chatCode = _getChatCode(msg.sender, friend_key);
         return allMessages[chatCode];
+    }
+
+    //getting all registered users
+    function getAllAppUser() public view returns(AllUserStruck[]memory){
+        return getAllUsers;
     }
 
 }
