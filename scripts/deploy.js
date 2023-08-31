@@ -4,16 +4,14 @@ const hre = require("hardhat");
 async function main() {
  
 
-  const lockedAmount = hre.ethers.parseEther("0.001");
+  const kulkonect_chat = await hre.ethers.getContractFactory("kulkonect_chat");
 
-  const lock = await hre.ethers.deployContract();
+  const Kulkonect_chat = await kulkonect_chat.deploy();
 
-  await lock.waitForDeployment();
+  await Kulkonect_chat.deployed();
 
   console.log(
-    `Lock with ${ethers.formatEther(
-      lockedAmount
-    )}ETH and unlock timestamp ${unlockTime} deployed to ${lock.target}`
+    `Contract Address: ${Kulkonect_chat.target}`
   );
 }
 
