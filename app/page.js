@@ -2,12 +2,12 @@
 import React, { useContext} from "react";
 
 //internal import
-import { KulkonectchatContext } from "../Context/kulkonect_chatContext";
+//import { KulkonectchatProvider } from "../context/kulkonectchatContext";
 
 const KulKonectChat = () =>{
-    const title = useContext(KulkonectchatContext);
+    //const title = KulkonectchatProvider;
     return (
-        <div>{title}</div>
+        <div>Hey Welcome to KulKonect Chat</div>
     )
 }
 

@@ -18,7 +18,7 @@
 import '../styles/globals.css';
 
 //internal imports
-import { kulkonect_chatProvider } from '../Context/kulkonect_chatContext';
+import { kulkonect_chatProvider } from '../context/kulkonectchatContext';
 import { NavBar } from '../Components/index';
 
 const MyApp = ({ Component, pageProps }) => (

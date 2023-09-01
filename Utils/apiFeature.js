@@ -2,7 +2,7 @@
 import { ethers } from "ethers";
 import Web3Modal from "web3modal";
 
-import {kulkonect_chatAddress, kulkonect_chatAbi} from '../Context/constants';
+import {kulkonect_chatAddress, kulkonect_chatAbi} from '../context/constants';
 
 
 export const CheckIfWalletConnected = async () => {
