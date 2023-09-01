@@ -1,16 +1,16 @@
 import '../styles/globals.css';
 
 //internal imports
-import {KulkonectchatProvider} from '@/Context/kulkonect_chatContext';
+import { kulkonect_chatProvider } from '../Context/kulkonect_chatContext';
 import { NavBar } from '../Components/index';
 
 const MyApp = ({ Component, pageProps }) => (
     <div>
-        <KulkonectchatProvider>
+        <kulkonect_chatProvider>
             <NavBar />
 
             <Component {...pageProps} />
-        </KulkonectchatProvider>
+        </kulkonect_chatProvider>
         
     </div>
 );
