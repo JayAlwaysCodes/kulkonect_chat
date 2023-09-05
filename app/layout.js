@@ -1,4 +1,4 @@
-import '../styles/globals.css';
+import './globals.css';
 
 //internal imports
 import {KulkonectchatProvider} from '../context/kulkonectchatContext';
