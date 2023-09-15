@@ -1,18 +1,18 @@
-import '../styles/globals.css';
+// import '../styles/globals.css';
 
-//internal imports
-import { kulkonect_chatProvider } from '../context/kulkonectchatContext';
-import { NavBar } from '../Components/index';
+// //internal imports
+// import { kulkonect_chatProvider } from '../context/kulkonectchatContext';
+// import { NavBar } from '../Components/index';
 
-const MyApp = ({ Component, pageProps }) => (
-    <div>
-        <kulkonect_chatProvider>
-            <NavBar />
+// const MyApp = ({ Component, pageProps }) => (
+//     <div>
+//         <kulkonect_chatProvider>
+//             <NavBar />
 
-            <Component {...pageProps} />
-        </kulkonect_chatProvider>
+//             <Component {...pageProps} />
+//         </kulkonect_chatProvider>
         
-    </div>
-);
+//     </div>
+// );
 
-export default MyApp;
+// export default MyApp;

@@ -11,7 +11,7 @@ const NavBar = () => {
     const menuItems = [
         {
             menu:"All Users",
-            link: "alluser",
+            link: "/",
         },
         {
             menu:"CHATS",
@@ -35,7 +35,7 @@ const NavBar = () => {
         },
     ];
     //usestate
-    const [active, setActive] = useState(2);
+    const [active, setActive] = useState();
     const [open, setOpen] = useState(false);
     const [openModel, setOpenModel] = useState(false);
 
@@ -51,7 +51,7 @@ const NavBar = () => {
                     {/* //Desktop */}
                     <div className={Style.NavBar_box_right_menu}>
                         {menuItems.map((el, i)=>(
-                            <div onClick={()=> setActive(i + 1)} key={i+1} className={`${Style.NavBar_box_right_menu_items} ${active == i +1 ? Style.active_btn : ""}`}>
+                            <div onClick={()=> setActive(i + 1)} key={i+1} className={`${Style.NavBar_box_right_menu_items} ${active == i + 1 ? Style.active_btn : ""}`}>
                                 <Link className={Style.NavBar_box_right_menu_items_link} href={el.link}>
                                     {el.menu}
                                 </Link>
@@ -60,10 +60,10 @@ const NavBar = () => {
                     </div>
                     {/* //Mobile */}
                     {!open && (
-                        <div className={Style.nobile_menu}>
+                        <div className={Style.mobile_menu}>
                         {menuItems.map((el, i)=>(
-                            <div onClick={()=> setActive(i + 1)} key={i+1} className={`${Style.nobile_menu_items} ${active == i +1 ? Style.active_btn : ""}`}>
-                                <Link className={Style.nobile_menu_items_link} href={el.link}>
+                            <div onClick={()=> setActive(i + 1)} key={i+1} className={`${Style.mobile_menu_items} ${active == i + 1 ? Style.active_btn : ""}`}>
+                                <Link className={Style.mobile_menu_items_link} href={el.link}>
                                     {el.menu}
                                 </Link>
                             </div>
@@ -77,7 +77,7 @@ const NavBar = () => {
                     {/* Connect wallet */}
                     <div className={Style.NavBar_box_right_connect}>
                         {account == "" ? (
-                            <button onClick={()=> connectWallet}>
+                            <button onClick={()=> connectWallet()}>
                                 {""}
                                 <span>Connect Wallet</span>
                             </button>

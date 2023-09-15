@@ -7,7 +7,7 @@ import { KulkonectchatContext } from "../context/kulkonectchatContext";
 const KulKonectChat = () =>{
   
     return (
-        <div>Hey Welcome to KulKonect Chat</div>
+        <div>Hey</div>
     )
 }
 
